@@ -29,6 +29,10 @@ public class Infomon {
         myDefenceStat = defenceStat;
     }
 
+    public String getType() {
+        return myType;
+    }
+
     public boolean isStronger(Infomon enemy) {
         int tempStat = myAttackStat;
 //        if (Objects.equals(myType, "fire") && Objects.equals(enemy.myType, "fire")) {
@@ -58,6 +62,12 @@ public class Infomon {
         else if (Objects.equals(myType, "earth") && Objects.equals(enemy.myType, "water")) {
             tempStat = myAttackStat * 2;
         }
+
+        if (tempStat == enemy.myDefenceStat) {
+            transform();
+            isStronger(enemy);
+        }
+
         return tempStat > enemy.myDefenceStat;
     }
 
@@ -95,6 +105,7 @@ public class Infomon {
 
 
     public void transform() {
+        System.out.println("Transformation!!");
         switch (myType) {
             case "earth":
                 myAttackStat += 200;
