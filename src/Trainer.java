@@ -51,22 +51,17 @@ public class Trainer {
 
     public void calculateTrainerPoints() {
         for (int i = 0; i < 5; i ++) {
-            String temp = String.valueOf(name.charAt(i));
-            if (checkFire(temp)) {
+            String charAtI = String.valueOf(name.charAt(i));
+            if (checkFire(charAtI)) {
                 firePoints++;
-            } else if (checkWater(temp)) {
+            } else if (checkWater(charAtI)) {
                 waterPoints++;
-            } else if (checkEarth(temp)) {
+            } else if (checkEarth(charAtI)) {
                 earthPoints++;
             }
         }
     }
 
-    public void printTrainerPoints() {
-        System.out.println("FirePoints: " + firePoints);
-        System.out.println("WaterPoints: " + waterPoints);
-        System.out.println("EarthPoints: " + earthPoints);
-    }
 
     public boolean attemptToCatch(Infomon infomon) {
         boolean caught = false;
@@ -81,4 +76,13 @@ public class Trainer {
         return caught;
     }
 
+    public void printTrainerPoints() {
+        System.out.println("FirePoints: " + firePoints);
+        System.out.println("WaterPoints: " + waterPoints);
+        System.out.println("EarthPoints: " + earthPoints);
+    }
+
 }
+
+
+

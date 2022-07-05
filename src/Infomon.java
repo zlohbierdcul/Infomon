@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class Infomon {
+
     private String myName;
     private String myType;
     private int myAttackStat;
@@ -9,7 +10,7 @@ public class Infomon {
     public Infomon(String name, String type, int attackStat, int defenseStat) {
         this.myName = name;
         this.myType = type;
-        this.myAttackStat = Math.max(attackStat, 0);
+        this.myAttackStat = Math.max(attackStat, 0); // returns the greater of two int values
         this.myDefenceStat = Math.max(defenseStat, 0);
     }
 
@@ -64,7 +65,7 @@ public class Infomon {
         }
 
         if (tempStat == enemy.myDefenceStat) {
-            transform();
+            enemy.transform();
             isStronger(enemy);
         }
 
