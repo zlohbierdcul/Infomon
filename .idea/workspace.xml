@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f65dc56-b15f-4b99-b44f-cf0c6e186b6c" name="Changes" comment="">
+    <list default="true" id="5f65dc56-b15f-4b99-b44f-cf0c6e186b6c" name="Changes" comment="added comments and fixed some minor bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infomon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infomon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -35,6 +35,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lucdreibholz/GitHub/Infomon&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
@@ -68,5 +69,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added comments and fixed some minor bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments and fixed some minor bugs" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Infomon" memberName="myDefenceStat" />
+        <PinnedItemInfo parentTag="Infomon" memberName="myAttackStat" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
