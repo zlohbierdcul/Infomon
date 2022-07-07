@@ -26,36 +26,36 @@ public class Infomon {
 
     // Checks if Infomon is stronger than enemy Infomon
     public boolean isStronger(Infomon enemy) {
-        int tempAttack = getAttackStat();   // storing attackStat in temp variable so actual value isn't manipulated.
+        int realAttackStat = getAttackStat();   // storing attackStat in temp variable so actual value isn't manipulated.
 
         // Checking all different cases of effectiveness and changing the temporary attackStat accordingly
         if (Objects.equals(getType(), "fire") && Objects.equals(enemy.getType(), "grass")) {
-            tempAttack *= 2;
+            realAttackStat *= 2;
         }
         else if (Objects.equals(getType(), "fire") && Objects.equals(enemy.getType(), "water")) {
-            tempAttack /= 2;
+            realAttackStat /= 2;
         }
         else if (Objects.equals(getType(), "water") && Objects.equals(enemy.getType(), "fire")) {
-            tempAttack *= 2;
+            realAttackStat *= 2;
         }
         else if (Objects.equals(getType(), "water") && Objects.equals(enemy.getType(), "grass")) {
-            tempAttack /= 2;
+            realAttackStat /= 2;
         }
         else if (Objects.equals(getType(), "grass") && Objects.equals(enemy.getType(), "fire")) {
-            tempAttack /= 2;
+            realAttackStat /= 2;
         }
         else if (Objects.equals(getType(), "grass") && Objects.equals(enemy.getType(), "water")) {
-            tempAttack *= 2;
+            realAttackStat *= 2;
         }
 
         // If the attackStat is the same then the enemy's defenceStat after checking the effectivity
         // the enemy Infomon gets transformed and the method is executed again
-        if (tempAttack == enemy.myDefenceStat) {
+        if (realAttackStat == enemy.myDefenceStat) {
             enemy.transform();
             isStronger(enemy);
         }
 
-        return tempAttack > enemy.getDefenceStat();     // returning who is stronger
+        return realAttackStat > enemy.getDefenceStat();     // returning who is stronger
     }
 
     // Checks if Infomon is weaker than enemy Infomon

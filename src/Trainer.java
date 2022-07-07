@@ -13,6 +13,7 @@ public class Trainer {
         } else {
             System.exit(99);    // Terminate program if not matching pattern
         }
+        calculateTrainerPoints();
     }
 
     // Checks if name is exactly 5 char long
@@ -69,15 +70,13 @@ public class Trainer {
     public boolean attemptToCatch(Infomon infomon) {
         boolean caught = false;
 
-        calculateTrainerPoints();
-
         switch (infomon.getType()) {
-            case "fire":
-                if (firePoints >= 2) { caught = true; }
-            case "water":
-                if (waterPoints >= 2) { caught = true; }
-            case "grass":
-                if (grassPoints >= 2) { caught = true; }
+            case "fire" -> { if ( firePoints >= 2) { caught = true; } }
+
+            case "water" -> { if (waterPoints >= 2) { caught = true; } }
+
+            case "grass" -> { if (grassPoints >= 2) { caught = true; } }
+
         }
         return caught;
     }
